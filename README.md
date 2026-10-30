@@ -1,3 +1,7 @@
+Fugazi is my favorite band. Ian MacKaye is a legend. I am trying to build a Knowledge Graph that will let people identify which songs were played in which sets. I don't know, it might also look cool when it it finished.
+
+Go and visit [Dischord Records](https://dischord.com/) and find some good music.
+
 # Fugazi Live Series metadata map
 
 Collects metadata from the public [Fugazi Live Series archive](https://dischord.com/fugazi_live_series) and converts it into a simple graph JSON file. The crawler requests HTML pages only. It does not request audio, samples, images, or purchase/download endpoints.
