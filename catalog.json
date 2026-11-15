@@ -1,0 +1,1395 @@
+{
+  "album_policy": "First official release; 13 Songs combines the first two EPs by user preference. Live variants remain separate pending review. Generic Intro is not automatically assigned to The Argument.",
+  "albums": [
+    {
+      "id": "album:13-songs",
+      "name": "13 Songs",
+      "color": "#8B2F60",
+      "color_status": "user_selected",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "album:repeater",
+      "name": "Repeater",
+      "color": "#286A9B",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "album:3-songs",
+      "name": "3 Songs",
+      "color": "#A96846",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "album:steady-diet",
+      "name": "Steady Diet of Nothing",
+      "color": "#8A7954",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "album:kill-taker",
+      "name": "In on the Kill Taker",
+      "color": "#D5BB49",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "album:red-medicine",
+      "name": "Red Medicine",
+      "color": "#C9443F",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "album:end-hits",
+      "name": "End Hits",
+      "color": "#B7A06E",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "album:instrument",
+      "name": "Instrument Soundtrack",
+      "color": "#B65E35",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/instrument"
+    },
+    {
+      "id": "album:furniture",
+      "name": "Furniture",
+      "color": "#6C794F",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/furniture"
+    },
+    {
+      "id": "album:argument",
+      "name": "The Argument",
+      "color": "#8DACA9",
+      "color_status": "cover_inspired_draft",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    }
+  ],
+  "songs": [
+    {
+      "id": "song:d01c3ee1-bffe-5b8d-a408-4f1173a4614d",
+      "title": "23 Beats Off",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:bf4a4b1b-0dc3-52a5-8e2c-0eab0d05bac8",
+      "title": "And The Same",
+      "aliases": [
+        "And the Same"
+      ],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:1663f38a-2848-5c7d-8696-7e742bb40373",
+      "title": "And The Same Drum and Bass Jam",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:ff8bf2a9-3dce-59fd-8b40-bded2526c47e",
+      "title": "And The Same Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:5ac21cef-668d-5938-a0d5-658b226e4424",
+      "title": "Argument",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:8bdf5296-3148-53c1-b0df-cd4f53669d79",
+      "title": "Arpeggiator",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:ae66c38b-ea7f-53f7-87c0-0dee12a354da",
+      "title": "Back To Base",
+      "aliases": [
+        "Back to Base"
+      ],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:a74e13fd-3e4c-50e1-9987-c6aca653e4b3",
+      "title": "Bad Mouth",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:a173ef28-f715-5577-9bba-cdd469e34421",
+      "title": "Bed For The Scraping",
+      "aliases": [
+        "Bed for the Scraping"
+      ],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:33987591-d4d9-5518-924c-60f7d608e2f5",
+      "title": "Bed For The Scraping (continued)",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:e50a091e-29d2-5f7b-b5b1-1cd89cc25841",
+      "title": "Birthday Pony",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:92fab6f6-d801-50f7-9503-794e936893e1",
+      "title": "Blueprint",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:d965a957-bcb6-51f5-8fdb-be0a00013a74",
+      "title": "Break",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:c7b803b4-2769-5fd8-8b7e-3957fd390a23",
+      "title": "Break Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:818ff2f7-1204-5614-84a3-a9cfccc00057",
+      "title": "Break-In",
+      "aliases": [],
+      "album_id": "album:3-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:869f3741-7a71-5519-8707-f65baed46629",
+      "title": "Brendan #1",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:3cd05bb3-3a2e-5017-bb24-517522c2df01",
+      "title": "Bulldog Front",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:81a8ca6f-d7f4-580d-8b26-ac37376e88ec",
+      "title": "Burning",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:a1e0ee0d-cd2d-5004-b850-0f2ff31f4e16",
+      "title": "Burning Too",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:8d078204-ced7-5158-b446-6413c738daa9",
+      "title": "By You",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:ce3dcc9d-cdaa-5d7c-8379-af1a8ef079a7",
+      "title": "By You Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:69453464-5673-57b1-8c29-ce7b6dacd40a",
+      "title": "Cashout",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:93a0ee33-09f8-5035-9b12-f01fc348d42b",
+      "title": "Cassavetes",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:2b46d859-0843-578d-9bf6-cc749b0e6d1a",
+      "title": "Cassavetes Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:6af2eb77-4641-54e4-b26e-c4d5491ccaf9",
+      "title": "Caustic Acrostic",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:b543fa0b-fcc5-5b49-8a15-8f4648bb7210",
+      "title": "Closed Captioned",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:16ec9a1e-b126-5cc7-9c40-1e923e2719ea",
+      "title": "Closed Captioned Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:7ba4d78d-55d2-5eba-9c39-a26d99cb6242",
+      "title": "Combination Lock",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:da9b4233-3ee7-5ea1-9574-50a28f49d3b4",
+      "title": "Dear Justice Letter",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:1bb53d01-d6a4-5a25-a932-dc375137874f",
+      "title": "Do You Like Me",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:6c2995d1-5293-514e-b378-b0d5e2ee0137",
+      "title": "Downed City",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:d88f0ace-ca1f-5597-9840-7a8a7ea0eb44",
+      "title": "Encore",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:b0e1f924-a326-5f4f-86b6-76ccb7d44dcd",
+      "title": "Encore - Comedy Of Life",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:541c25fa-34d9-561d-a801-eb4feabbc2eb",
+      "title": "Encore 1",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:d2bf250e-d734-54b9-a2d9-833b861a89f3",
+      "title": "Encore 2",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:2b217c37-b03b-5a68-81f2-1109ee05086b",
+      "title": "Encore 3",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:6c2030bb-e1ca-562b-bafa-c3f4f0165d8e",
+      "title": "Encore 4",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:c1ba2a52-132c-5383-90bc-3a731051d209",
+      "title": "Epic Problem",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:3b242c4b-7a2a-52e2-a2be-3f0831018f54",
+      "title": "Ex-Spectator",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:d07b8269-e5a9-5888-909e-52d06f7c7f25",
+      "title": "Ex-Spectator Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:e63a30a2-4a6c-536a-8162-6c637fb0b470",
+      "title": "Exit Only",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:b236f827-0d8c-5e11-a6f8-39772c92b9ac",
+      "title": "F/D",
+      "aliases": [
+        "FD"
+      ],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:7d51f671-91d8-580a-9e6a-db1d0604c23b",
+      "title": "Facet Squared",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:924f52e7-21a4-5a04-b4f6-229be0614b1e",
+      "title": "Facet Squared Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:97d9c8c1-1aef-5235-aba6-96894d472a5b",
+      "title": "Fell, Destroyed",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:20514f32-0f87-5db6-b5b5-8fc5647db655",
+      "title": "Fell, Destroyed Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:860fa9fe-4458-553e-b02c-602fb8cc638e",
+      "title": "Five Corporations",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:5db269f4-db31-56f6-8ab3-1f61df16cede",
+      "title": "Floating Boy",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:1bc7674b-f771-55f0-9868-fbedf75b1974",
+      "title": "Floating Boy Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:4838bc84-3232-57c5-824a-d02ece38d689",
+      "title": "Foreman's Dog",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:4d7728f7-4cb7-563f-8286-99da90c58979",
+      "title": "Forensic Scene",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:526131f5-60b1-5922-9543-dfc305ddd76f",
+      "title": "Full Disclosure",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:7cc3d88a-0b93-5d8b-9a11-4bb162b41a83",
+      "title": "Furniture",
+      "aliases": [],
+      "album_id": "album:furniture",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/furniture"
+    },
+    {
+      "id": "song:a6e39051-1df5-5302-b226-0a7fbd536ddb",
+      "title": "Give Me The Cure",
+      "aliases": [
+        "Give Me the Cure",
+        "Give me the Cure"
+      ],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:5fbd9bc8-65e3-5129-9e3e-99a0e08365fb",
+      "title": "Glue Man",
+      "aliases": [
+        "Glueman"
+      ],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:92275369-d7f2-5f1f-bd02-24a8eca9e1ac",
+      "title": "Great Cop",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:af352a99-4a6c-5aff-ac0f-af3f86efb7ca",
+      "title": "Great Cop Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:1e32635b-6403-50f2-876f-9c28c3ecc161",
+      "title": "Greed",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:22ce9aeb-70a5-5d32-bf0b-2083139b0d97",
+      "title": "Guilford Fall",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:471c174c-0916-5585-a434-16ea383660fa",
+      "title": "Guilford Fall Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:d04f8351-0a27-59f0-af00-3f0efbe48e7e",
+      "title": "Heart on My Chest",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:301c0e5a-b7f1-578b-9dbf-365a4effcb80",
+      "title": "Hello Morning",
+      "aliases": [],
+      "album_id": "album:furniture",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/furniture"
+    },
+    {
+      "id": "song:4b4b0555-d797-53de-a521-7cd2ac9619db",
+      "title": "Hello Morning Seed",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:43208b9a-34c3-57ed-b5b3-4444cce7ebae",
+      "title": "I Spent It All",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:02c15eac-3aad-5f17-a82c-dbd0c0997cc4",
+      "title": "Ice Cream Eating MotherFucker",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:989537f6-a38a-5dd4-acba-25ace6703025",
+      "title": "In Defense Of Humans",
+      "aliases": [
+        "In Defense of Humans"
+      ],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:dbb26c3a-3bbe-53ef-8608-f22b442d7986",
+      "title": "Instrument",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:fdad4393-1636-5dfe-89be-1d379073533d",
+      "title": "Instrumental Interlude",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:ac5f6e7c-73d2-50c7-9edd-49994bd08bf9",
+      "title": "Interlude",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:6776fabf-1314-5c19-8e1b-a3a2951554c8",
+      "title": "Interlude 1",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:568f870c-e03b-5a64-938b-ea35f1f92770",
+      "title": "Interlude 10",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:a2e057ea-2a63-5a0e-9ef5-2b431df14a9a",
+      "title": "Interlude 11",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:a0403fa7-a244-5e8e-b8d1-c8667a7c8574",
+      "title": "Interlude 2",
+      "aliases": [
+        "Interlude-2"
+      ],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:2a15e3bb-66f4-5f7f-9926-36ecca8afcbd",
+      "title": "Interlude 3",
+      "aliases": [
+        "Interlude-3"
+      ],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:23026ff5-799b-5dc7-a74f-55ad09e03c63",
+      "title": "Interlude 4",
+      "aliases": [
+        "interlude 4"
+      ],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:7a80313a-0385-52d6-8840-bdbe20483fcd",
+      "title": "Interlude 5",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:1312bf30-189a-5860-b5a7-0931d7d1d3f7",
+      "title": "Interlude 6",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:b26d2308-3dc1-5416-9608-9dc8db652521",
+      "title": "Interlude 7",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:78d9e7ef-2f52-5696-9b0a-dbaf39d035cc",
+      "title": "Interlude 8",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:6fca0beb-4857-5318-ad50-373cadd2d296",
+      "title": "Interlude 9",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:ca88b434-85a7-5aa8-804d-9a30e082cbd6",
+      "title": "Intro",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:f84a1389-b0a2-57c8-8c8c-e0b4e5cb38a7",
+      "title": "Joe #1",
+      "aliases": [],
+      "album_id": "album:3-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:ec797038-7740-5aba-a61e-b7ae0d637d0e",
+      "title": "KYEO",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:2b736b37-7d1d-5608-8a9b-a1db02c6f34d",
+      "title": "Last Chance For A Slow Dance",
+      "aliases": [
+        "Last Chance For a Slow Dance",
+        "Last Chance for a Slow Dance"
+      ],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:99080e11-6428-5b30-acbe-acb658ffcad2",
+      "title": "Latest Disgrace",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:a8b3cabb-6add-5a30-a61f-f5cee1263484",
+      "title": "Latin Roots",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:9c58b2c1-d3df-59d8-b17a-c5582cf87b8d",
+      "title": "Latin Roots Acapella",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:81296c2d-01f1-556e-ac92-a05e48c52594",
+      "title": "Life And Limb",
+      "aliases": [
+        "Life and Limb"
+      ],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:8e6d0fbe-df8e-57a0-955d-77cfb6b3a4a4",
+      "title": "Link Track",
+      "aliases": [],
+      "album_id": "album:instrument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/instrument"
+    },
+    {
+      "id": "song:6f63706c-7f87-5ad5-a2fd-f260ae5c577f",
+      "title": "Lock Dug",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:d25f0cb0-076f-5bc2-b5c8-3bccc8117575",
+      "title": "Lockdown",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:f958a911-2bd1-5cb8-bc1b-22fadeede4f1",
+      "title": "Lockdown Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:7670c815-387e-5fc7-b92b-756c569b52a1",
+      "title": "Long Distance Runner",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:9627155f-7e9f-5413-90c2-563c563325d2",
+      "title": "Long Division",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:2ed84287-410c-5efe-8592-177ea58e05c9",
+      "title": "Long Division Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:e9aa0f64-b97d-5b22-b43d-1bf5f1908668",
+      "title": "Margin Walker",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:1ec3c848-3661-5ae2-81c3-3040240605a9",
+      "title": "Merchandise",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:b25a7b55-95d7-5045-9fd2-525a7ccab730",
+      "title": "Nedcars",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:97e290b3-4483-5030-9edd-de199864fc0a",
+      "title": "Nice New Outfit",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:e7a40dda-7496-5a46-a94b-373a30ec9b84",
+      "title": "Nightshop",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:84139990-b299-524d-9a83-96c740e93264",
+      "title": "No Surprise",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:e7ba7bd9-8cff-5368-a84b-159f212eb69c",
+      "title": "Noisy Dub",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:7cec5338-3dfb-5b81-b4da-38db3c077221",
+      "title": "NSA",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:7ec0858b-6a9f-5163-80b9-86e3431f139a",
+      "title": "Number Five",
+      "aliases": [
+        "Number 5"
+      ],
+      "album_id": "album:furniture",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/furniture"
+    },
+    {
+      "id": "song:6d678708-4045-5258-a319-90e238c50686",
+      "title": "Oh",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:4bd66f90-ffd9-5d3b-ab9f-6f403f01db5a",
+      "title": "Oh Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:152fc245-a1d5-5166-a7bc-d5cca5804890",
+      "title": "Opening Remarks",
+      "aliases": [
+        "Opening remarks"
+      ],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:e3a36220-6298-5de1-ab0e-b49520ebca0a",
+      "title": "Outro",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:2a1cc78b-8463-5ba6-a986-68c0baa6ff92",
+      "title": "Outside the Gig!",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:33c1e728-d89c-568f-bc82-39166ca0516f",
+      "title": "Pink Frosty",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:a220179f-9a72-53f7-91c2-ea26581474af",
+      "title": "Pink Frosty Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:31836f34-13b9-5239-83a9-97ee3c017f91",
+      "title": "Place Position",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:9599818a-194f-5a07-85a0-8de097906d31",
+      "title": "Polish",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:d9cef38d-ce8e-5716-a8fc-67b2c0b59f55",
+      "title": "Preprovisional",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:5147c778-a0ba-5ad5-a840-0138cdfcaec3",
+      "title": "Promises",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:f3043eaf-3c37-5dbf-aafd-83a736edf6da",
+      "title": "Promises Bit",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:3aaed87f-3e64-573e-9803-5fe1159ba22e",
+      "title": "Promises Bit Soundcheck",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:66adf578-3600-5611-9053-c46858984333",
+      "title": "Promises Coda Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:3aae2b17-9e5e-570a-9172-9fdd716d5546",
+      "title": "Provisional",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:68606395-09f3-51dc-9cea-495b3eeacbbf",
+      "title": "Provisional Medley",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:71be7941-a001-5603-a56b-f2d8db63a853",
+      "title": "Public Witness Program",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:ad722a9c-0287-56bd-b2c7-bb7c85d34082",
+      "title": "Recap Modotti",
+      "aliases": [],
+      "album_id": "album:end-hits",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/end-hits"
+    },
+    {
+      "id": "song:18400f03-8e30-5e81-907a-eb9fd8f1e3e2",
+      "title": "Reclamation",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:244f8d9f-f066-50e1-b721-dd77afd3ca52",
+      "title": "Reclamation Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:41cd70e8-03d3-5127-9863-d530672b857e",
+      "title": "Remarks",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:b04a182b-8128-55c8-b5ed-f7f5a4086d99",
+      "title": "Rend It",
+      "aliases": [
+        "Rend it"
+      ],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:1a6880b0-7f2e-5767-9f56-95497648f36c",
+      "title": "Repeater",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:d7f77408-35fa-5b5a-a26f-8863a0f96108",
+      "title": "Reprovisional",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:fe31f004-ed75-5609-9ab6-fa2cbcb746f0",
+      "title": "Returning The Screw",
+      "aliases": [
+        "Returning the Screw"
+      ],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:b9afcd41-f189-5eaf-aedd-556d13bc1944",
+      "title": "Runaway Return",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:c815c4b9-354f-549e-81f9-2fa1a340b8f3",
+      "title": "Set the Charges",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:f86f67fd-2e71-5b19-a7c9-ab439f7c44d7",
+      "title": "She Is Blind",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:fe008c1a-7037-5377-ad60-eccc5f2cd4ce",
+      "title": "Shut the Door",
+      "aliases": [
+        "Shut The Door"
+      ],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:29261663-aae7-5543-ad26-401ca4e11714",
+      "title": "Sieve-Fisted Find",
+      "aliases": [
+        "Sieve-Fisted FInd"
+      ],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:ae010b46-c93a-5b85-86c9-2f12c2cdc6b8",
+      "title": "Smallpox Champion",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:ee0197d9-7e4c-53bf-9877-fc6baa956483",
+      "title": "Song #1",
+      "aliases": [],
+      "album_id": "album:3-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:9fed0c34-64ca-538a-9662-e21431c7c878",
+      "title": "Soundcheck",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:87c0a208-7c4c-5c3c-b4ea-a3d8b889c6ef",
+      "title": "Stacks",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:1d6fb278-71c6-5b2f-8f6f-41e99a9b9272",
+      "title": "Steady Diet",
+      "aliases": [],
+      "album_id": "album:steady-diet",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/steady-diet-of-nothing"
+    },
+    {
+      "id": "song:f4a24752-38c6-5fbe-ad2b-9a47747b617c",
+      "title": "Strange Disclosure",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:c91868e6-09eb-5746-9fa1-e0413ad75dc8",
+      "title": "Strangelight",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:b38b1d0c-4851-57aa-9e3d-2b1963fc4365",
+      "title": "Styrofoam",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:42311e08-b6a8-58e1-aab0-c2fa6b8ead39",
+      "title": "Suggestion",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:721838be-72a4-5feb-a8e2-6376b4db9b27",
+      "title": "Suggestion Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:d868047f-ba20-579f-84b9-c48a882b83b1",
+      "title": "Surf Tune 1",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:77f568ec-8b69-5ec7-9671-6f0376c4fe34",
+      "title": "Surf Tune 2",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:331debaf-2c04-565e-87e4-74a019c57754",
+      "title": "Surf Tune 3",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:f6347ea1-d054-5edf-b9e9-59f8bb46781e",
+      "title": "Sweet And Low",
+      "aliases": [
+        "Sweet and Low"
+      ],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:f59dd6ef-eeb0-5608-accb-b4b7910ee82f",
+      "title": "Target",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:79ce6d6e-c263-574c-850c-6e4e0982a950",
+      "title": "The Kill",
+      "aliases": [],
+      "album_id": "album:argument",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/the-argument"
+    },
+    {
+      "id": "song:906ee99f-5be7-5f0c-8921-204662067acf",
+      "title": "The Word",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:f32f9512-8122-56a4-bf8e-0ccc401cd368",
+      "title": "Turn Off Your Guns",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:310a3177-ef89-5732-93a4-7aea98f8d782",
+      "title": "Turnover",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:3b2f1f91-2666-5835-a06d-e0f862126aed",
+      "title": "Two Beats Off",
+      "aliases": [],
+      "album_id": "album:repeater",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/repeater-3-songs"
+    },
+    {
+      "id": "song:318b7e9a-b115-58cb-a4df-325b5fef17db",
+      "title": "Two Beats Off Instrumental",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    },
+    {
+      "id": "song:7f134621-03a0-55f3-a0fc-b49d2d2b28ad",
+      "title": "Version",
+      "aliases": [],
+      "album_id": "album:red-medicine",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/red-medicine"
+    },
+    {
+      "id": "song:abff13ca-f458-5690-a26f-2a6704a451f9",
+      "title": "Waiting Room",
+      "aliases": [],
+      "album_id": "album:13-songs",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/13-songs"
+    },
+    {
+      "id": "song:a29044d5-4e11-5808-9f98-41c124a579bd",
+      "title": "Walken's Syndrome",
+      "aliases": [],
+      "album_id": "album:kill-taker",
+      "review_status": "release_matched",
+      "source_url": "https://fugazi.bandcamp.com/album/in-on-the-kill-taker"
+    },
+    {
+      "id": "song:22037f81-c4f8-5a51-9791-d16c4730ed47",
+      "title": "World Beat",
+      "aliases": [],
+      "album_id": null,
+      "review_status": "needs_review",
+      "source_url": null
+    }
+  ],
+  "location_aliases": {
+    "country": {},
+    "state": {},
+    "city": {},
+    "venue": {}
+  }
+}

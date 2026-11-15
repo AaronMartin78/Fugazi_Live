@@ -21,7 +21,8 @@ The most recent crawl found 1,049 show entries:
 - 1,049 with a Dischord show ID, date, venue, city, and country
 - 952 with setlists, containing 24,562 ordered track entries
 - 967 with listed opening acts
-- Graph export: 3,397 nodes and 28,310 edges
+- Original schema-1 graph export: 3,397 nodes and 28,310 edges
+- Current schema-2 graph export: 3,529 nodes and 31,260 edges (same 24,562 performances)
 
 Generated files:
 
@@ -44,7 +45,11 @@ Each show JSON record includes:
 
 The graph has `nodes` and `edges`. Show nodes connect to song nodes through `performed` edges, with track order on the edge. Shows also connect to venue, place, and opening-act nodes.
 
-Keep each listed track title available as source data. The graph exporter currently creates song IDs by slugifying titles; this normalizes case and punctuation and may combine spellings that should remain distinct. If building canonical song identities or aliases, preserve the original title and make merges explicit and reviewable.
+The schema-2 exporter uses stored song IDs in `catalog.json`, explicit aliases, and deterministic hierarchical UUIDs for countries, states/subdivisions, cities, and venues. Case/whitespace/Unicode composition normalize; punctuation does not silently merge entities. Performance edges preserve every listed title and position. The tracked catalog currently has 159 song/track labels, including live variants and non-song labels pending review; 90 have release matches. Unknown is not the same as unreleased.
+
+Album grouping uses first official release with an explicit project exception: 13 Songs groups the original two EPs and is the first album group. Its color is dark pink/purple, #8B2F60. Remaining cover-inspired colors are drafts. Release mappings include official Fugazi Bandcamp source URLs. Original scraped records remain unchanged. Album metadata is separately curated enrichment.
+
+Run `uv run python -m unittest -v` for offline regression tests and `uv run python audit_graph.py` for full local dataset integrity checks and a review report. See README for schema migration and location alias configuration. The old graph IDs and combined place nodes are replaced.
 
 ## Run commands
 
@@ -85,4 +90,4 @@ Gephi is useful for exploratory network layouts and analysis. The current custom
 - Gephi GEXF export
 - Local interactive map/timeline/search viewer
 - Geocoded coordinates
-- Explicit canonical song/alias review workflow
+- Complete review of uncertain song/live-variant/non-song labels and location aliases (catalog and audit report now provide the review mechanism)
