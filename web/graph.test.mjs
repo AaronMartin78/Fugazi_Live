@@ -28,6 +28,13 @@ test('selected songs intersect actual graph relationships', () => {
   const expected = source.filter(show => ['Waiting Room', 'Merchandise'].every(title => show.setlist.some(track => track.title === title)));
   assert.deepEqual(ids(search(index, {selected: [a.id, b.id]})), ids(expected));
 });
+test('five selected favorites intersect source shows without a selection-count limit', () => {
+  const names = ['Waiting Room', 'Merchandise', 'Blueprint', 'Reclamation', 'Suggestion'];
+  const selected = names.map(name => index.entities.find(node => node.type === 'song' && node.name === name).id);
+  const expected = source.filter(show => names.every(title => show.setlist.some(track => track.title === title)));
+  assert.ok(expected.length > 0);
+  assert.deepEqual(ids(search(index, {selected})), ids(expected));
+});
 test('year range and missing-setlist filter agree with source', () => {
   assert.deepEqual(ids(search(index, {from: 1992, to: 1993, setlistsOnly: true})), ids(source.filter(show => show.event_date >= '1992-01-01' && show.event_date <= '1993-12-31' && show.setlist.length)));
 });

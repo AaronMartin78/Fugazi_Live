@@ -1,16 +1,36 @@
-[Live archive search](https://aaron-martin-phd.dev/fugazi/)
+# Fugazi Live Series: search and explore
 
-![Fugazi Live archive search showing Berlin results and a published setlist](docs/fugazi-live.png)
+[Search](https://aaron-martin-phd.dev/fugazi/) · [Explore](https://aaron-martin-phd.dev/fugazi/explore.html) · [Technical note](https://aaron-martin-phd.dev/fugazi/technical.html)
+
+<img src="docs/fugazi-search.png" width="900" alt="Fugazi Live archive search, cropped immediately after the search bar">
 
 Fugazi is my favorite band. Ian MacKaye is a legend. This is a knowledge graph and static search app for finding which songs were listed in which sets, and following each show back to Dischord.
 
 Go and visit [Dischord Records](https://dischord.com/) and find some good music.
 
-# Fugazi Live Series metadata map
+## Archive metadata and provenance
 
 Collects metadata from the public [Fugazi Live Series archive](https://dischord.com/fugazi_live_series) and converts it into a simple graph JSON file. The crawler requests HTML pages only. It does not request audio, samples, images, or purchase/download endpoints.
 
 The collected fields prioritize the show ID, date, venue, city, subdivision, country, opening acts, ordered setlist, and source page URLs. Missing fields are left empty; the archive is mapped as published rather than filled from outside sources.
+
+## Current features
+
+The public site is live on the owner's Quarto / GitHub Pages website. Python builds the graph; plain JavaScript searches and summarizes it in the visitor's browser. There is no production database, backend, LLM, embedding model or inference service.
+
+| View | What it does |
+| --- | --- |
+| Search | Match songs, shows, places, venues and opening acts; intersect multiple selections; filter by year/country; inspect ordered setlists and follow original Dischord links. Each show now has a shareable URL and a visible Setlist control. |
+| Explore | Top 20 release-matched songs by distinct shows; city map with region views; opening-act network with weighted shared-bill connections. Shared year/country filters apply to all three. |
+| Technical note | Collection, provenance, graph schema, exact search behavior, metric definitions, validation and Neo4j visualization limits. |
+
+The current graph has **3,529 nodes and 31,260 edges**, covering **1,049 shows from 1987–2002**, **159 song/track labels**, and **24,562 listed track occurrences**. There are 97 shows without listed setlists and 69 labels requiring review; missing data remains unknown. The map covers 1,025 shows across 400 matched city records; 24 shows / 19 unresolved locations remain unplotted.
+
+<table><tr><td><img src="docs/fugazi-map.png" width="440" alt="European show map with country borders"></td><td><img src="docs/fugazi-openers.png" width="440" alt="Opening-act network with node areas based on appearances with Fugazi"></td></tr><tr><td>Derived city coordinates; modern borders only in regional maps.</td><td>Node area = appearances with Fugazi; links = shared bills.</td></tr></table>
+
+Search reads the full graph; the opener visualization is a derived slice, not a drawing of the entire database. Text matching is deterministic, with exact entity names, explicit selections and substring fallback—not semantic similarity. Selecting five songs returns the shows linked to all five. Exclusions, free-form instructions and track-order queries are not implemented.
+
+Read [why I built this](https://aaron-martin-phd.dev/homelab/#fugazi-live-series) for the personal story. This is an independent fan project, unaffiliated with Fugazi or Dischord Records. Recordings and purchases stay with Dischord.
 
 ## Setup
 
@@ -54,6 +74,12 @@ In Desktop, open the local instance's import folder and copy the two CSV files t
 
 The importer preserves IDs, uses MERGE for repeatable imports, and preserves position/original title on PERFORMED relationships. Nested JSON/list fields are preserved as text properties ending in `_json`. Dates remain ISO strings. Reimport updates/adds records but does not delete records removed from later exports. CSV files must be in the instance import directory; selecting them in the visual Import tool is a different workflow.
 
+### Exploring the full network
+
+The complete graph is available for local analysis and as downloadable JSON. Neo4j Browser's display limits are separate from database/import limits: [current documentation](https://neo4j.com/docs/browser/operations/browser-settings/) lists default limits of 1,000 visualized nodes and 1,000 fetched records; [legacy versions](https://neo4j.com/docs/browser/legacy/operations/browser-settings/) use an initial 300-node display limit. Check the installed version and settings before diagnosing a truncated picture.
+
+Verify import totals against the Neo4j manifest in table view, then explore a bounded neighborhood or time range. Aggregate/table queries should answer full-dataset questions; a rendered slice should not be used to infer totals. The [technical note](https://aaron-martin-phd.dev/fugazi/technical.html#full-network) includes example Cypher queries. A general expandable full-graph viewer is not implemented.
+
 ## Regression tests and normalization review
 
 ```powershell
@@ -75,7 +101,7 @@ The [Explore view](https://aaron-martin-phd.dev/fugazi/explore.html) adds a top-
 
 The map uses a separate GeoNames coordinate layer and Natural Earth land geometry, with 400 matched city records covering 1,025 shows. Nineteen unresolved locations (24 shows) are listed rather than guessed. See [map sources and matching rules](web/GEOGRAPHY.md). Run `uv run python build_map.py --download` to refresh the local source snapshots, or omit `--download` to reuse cached geography. No map services are called at runtime.
 
-Run `node --test web/graph.test.mjs web/metrics.test.mjs` after exporting to verify both search and Explore metrics against the original source records.
+Run `node --test web/graph.test.mjs web/metrics.test.mjs web/map-projection.test.mjs` after exporting to verify both search and Explore metrics against the original source records.
 
 ```powershell
 uv run python export_web.py

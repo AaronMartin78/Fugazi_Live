@@ -93,3 +93,33 @@ https://aaron-martin-phd.dev/fugazi/explore.html (website commit
 `bad93e6d5dea714b5ac52202a6f2fa0891f5c6cd`, Actions run 44388370071).
 The published page loaded all three views; live selections for Waiting Room,
 Washington DC, and Branch Manager displayed their source shows and Dischord links.
+
+## Regional map correction
+
+Regional views now use uniformly scaled Mercator instead of stretching longitude
+and latitude independently. Natural Earth country borders appear only in regional
+views; the world overview retains its original projection and no borders. Three
+focused checks passed for world coordinates, local projection proportions, and
+valid border geometry. Browser checks confirmed zero border paths in World and
+331 clipped boundary paths in regional views. Modern borders are labeled as
+orientation aids, with historical archive country labels preserved.
+
+Deployed via commit `4925dc6a3a978d94af9cbcd64e49b9c8502aebd8`, Actions run
+44390482839. A versioned script URL avoids stale browser caches. The live site
+was verified with zero World borders and visible Europe borders/projection note.
+
+## Documentation and reviewer improvements
+
+Added the Technical note tab and a Fugazi project section under Homelab/Projects.
+README images now use a compact search capture ending after the search bar and
+separate map/network crops. The project story received light copy edits, retaining
+the author's voice and linking back to Dischord.
+
+Show dates and visible Setlist links open the detail, which now writes a human
+show ID into the URL. Reload and browser Back restore the selected show/search.
+Details are explicitly beside results on wide screens and above results in a
+bounded scrolling panel on narrow screens, with a Back to shows control.
+Browser checks passed on four-result and full 1,049-result searches, including
+a bare `?show=FLS0927` link. A compact relationship diagram explains the graph
+beside Search. All 23 Python and 16 JavaScript checks passed, including a new
+five-song intersection comparison against original source records.

@@ -1,0 +1,13 @@
+### Fugazi Live Series {#fugazi-live-series}
+
+Ian MacKaye [co-founded Dischord Records](https://dischord.com/band/ian-mackaye) with Jeff Nelson in 1980 to document the music scene in Washington, DC. I was born in Richmond, VA, about 100 miles away, in 1978. Somehow, there was this entire universe of hardcore punk music happening right under my nose, and it never dawned on me that I could either be a part of it, or go to shows, or even just listen to the music.
+
+Over the last two years I have become semi-obsessed with Fugazi and Minor Threat and Embrace and Dag Nasty and a bunch of other DC hardcore bands. It is hard to explain, but it closely approximates nostalgia for an alternative universe that I never experienced but that was eminently graspable. I guess it is just like this huge What If. What if I had found *13 Songs* when I was 16 years old? What if I had put the X's on my hands and gone to the Flood Zone just to see what was going on? It also doesn't hurt that the music fucking rips, and the lyrics are insightful, and the emotions are raw.
+
+Anyway, I basically scraped the metadata from the [Fugazi Live Series](https://dischord.com/fugazi_live_series) and put it in a graph database and JSON files. This makes it a bit easier to search, because you can look for relationships between cities and songs, for example. Or songs and songs: if you wanted to find a live set that had your five favorite songs, this database could help you do that—assuming the published setlists contain one.
+
+The website now has a search view, a chart of the most frequently listed songs, a city map, and a network of opening acts sharing bills. The database is useful for local analysis; the public site runs entirely in the browser, without a live database or LLMs.
+
+[Search the archive](../fugazi/index.html) · [Explore the connections](../fugazi/explore.html) · [Technical note](../fugazi/technical.html) · [Source on GitHub](https://github.com/AaronMartin78/Fugazi_Live)
+
+Make sure you check out the [Dischord Records store](https://dischord.com/) and buy some music!

@@ -91,7 +91,7 @@ function renderMap() {
   const metrics = state.metrics;
   const [west,east,south,north] = regions[$('#region').value];
   const regional = $('#region').value !== 'world';
-  const width = 960, height = 460;
+  const width = 960, height = regional ? 600 : 460;
   const project = mapProjection([west,east,south,north],regional,width,height);
   const canvas = svg('svg',{viewBox:`0 0 ${width} ${height}`,role:'group','aria-label':'Shows by city. Select a circle or a city button below.'});
   const defs = svg('defs'), clip = svg('clipPath',{id:'map-clip'}); clip.append(svg('rect',{width,height})); defs.append(clip); canvas.append(defs);
@@ -108,7 +108,12 @@ function renderMap() {
     const d = lines.map(line => line.map((coordinate,i) => `${i?'L':'M'}${project(coordinate).map(value => value.toFixed(2)).join(',')}`).join('')).join('');
     scene.append(svg('path',{d,class:'country-border',fill:'none',stroke:'#8d9587','stroke-width':'.9','vector-effect':'non-scaling-stroke','pointer-events':'none','aria-hidden':'true'}));
   }
-  $('#border-note').hidden = !regional;
+  let borderNote = $('#border-note');
+  if (!borderNote) {
+    borderNote = el('p','Regional views use Mercator projection and modern country borders for orientation. Archive country labels remain as published.','caption');
+    borderNote.id = 'border-note'; $('#map').after(borderNote);
+  }
+  borderNote.hidden = !regional;
   const regionRows = metrics.mapped.filter(row => row.geo.longitude >= west && row.geo.longitude <= east && row.geo.latitude >= south && row.geo.latitude <= north);
   const groups = new Map();
   for (const row of regionRows) {

@@ -7,13 +7,14 @@
   <title>Fugazi / Live archive search</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="explore.css">
-  <script type="module" src="app.mjs"></script>
+  <link rel="stylesheet" href="search-ui.css">
+  <script type="module" src="app.mjs?v=show-links-1"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to shows</a>
   <header><a class="home" href="/">Aaron R. Martin</a><a href="https://dischord.com/fugazi_live_series">Dischord Live Series ↗</a></header>
   <main>
-    <nav class="archive-nav" aria-label="Archive views"><a href="index.html" aria-current="page">Search</a><a href="explore.html">Explore</a></nav>
+    <nav class="archive-nav" aria-label="Archive views"><a href="index.html" aria-current="page">Search</a><a href="explore.html">Explore</a><a href="technical.html">Technical note</a></nav>
     <section class="intro"><p class="eyebrow">An independent fan project · Metadata only</p>
       <h1>FUGAZI<span>LIVE ARCHIVE SEARCH</span></h1>
       <p class="lede">Find a song. Follow it through the shows.</p>
@@ -30,6 +31,7 @@
       <div class="filters"><label>From year<input id="from" type="number" min="1987" max="2002" placeholder="1987"></label><label>To year<input id="to" type="number" min="1987" max="2002" placeholder="2002"></label><label>Country / archive label<select id="country"><option value="">All countries</option></select></label><label class="check"><input id="setlists-only" type="checkbox">With a listed setlist</label><button id="reset" type="button" class="quiet">Clear all</button></div>
       <p id="filter-error" role="alert"></p>
     </section>
+    <div class="graph-hint"><div class="connections" aria-label="Example graph: a show links to songs and cities"><span>Song</span> ← performed — <span>Show</span> — happened_in → <span>City</span></div><p>A show connects to its listed songs, venue, location, and opening acts. Select multiple entities to find shows linked to all of them. <a href="technical.html#search">How search works →</a></p></div>
     <div class="workspace"><section id="results" aria-label="Matching shows" tabindex="-1"><div class="section-heading"><h2>Shows</h2><span id="result-count" role="status" aria-live="polite"></span></div><div id="show-list"></div><button id="more" hidden>Show more</button></section>
       <aside id="detail" aria-label="Show details"><p class="empty">Select a show to explore its setlist and visit the original archive page.</p></aside></div>
     <section class="notes"><h2>About this data</h2><p>This is an independent fan project, unaffiliated with Fugazi or Dischord Records. The source is the public <a href="https://dischord.com/fugazi_live_series">Fugazi Live Series archive</a>. Support the archive by visiting Dischord; recordings and purchases stay there.</p>

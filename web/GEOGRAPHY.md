@@ -15,8 +15,15 @@ in `unresolved`. The build timestamp and source URLs are recorded in the file.
   https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson
 - Natural Earth terms: https://www.naturalearthdata.com/about/terms-of-use/
 
-`land.json` strips unrelated feature properties; no political borders are drawn.
-The map uses a simple equirectangular projection and fixed regional extents.
+`land.json` strips unrelated feature properties. Regional views add modern
+country boundary lines from Natural Earth's 1:110m admin-0 land boundaries,
+also public domain, via `borders.json`. These lines are for orientation and do
+not relabel the historical archive or assert historical borders.
+Source: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_boundary_lines_land.geojson
+
+The world overview keeps its equirectangular projection and has no country
+borders. Regional views use Mercator with a uniform horizontal/vertical scale
+fitted within the map, avoiding independently stretched continental outlines.
 No tiles, external geocoding calls, or third-party scripts load at runtime.
 
 ## Coordinate matching

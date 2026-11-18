@@ -41,6 +41,43 @@ function filters() {
   return {query: $('#query').value, selected: state.selected, from: $('#from').value,
     to: $('#to').value, country: $('#country').value, setlistsOnly: $('#setlists-only').checked};
 }
+function urlParams(show = state.active && state.index.nodes.get(state.active)) {
+  const options = filters(), params = new URLSearchParams();
+  for (const key of ['query', 'from', 'to', 'country']) if (options[key]) params.set(key, options[key]);
+  for (const id of state.selected) params.append('entity', id);
+  if (options.setlistsOnly) params.set('setlists', '1');
+  if (show) params.set('show', show.show_id);
+  return params;
+}
+function syncUrl(push = false) {
+  const params = urlParams();
+  const url = locationPath() + (params.size ? '?' + params : '');
+  if (push && url !== window.location.pathname + window.location.search) history.pushState(null, '', url);
+  else history.replaceState(null, '', url);
+}
+function openShow(show) {
+  state.active = show.id;
+  renderShows(); renderShow(show); syncUrl(true);
+  $('#detail').focus({preventScroll: true});
+  $('#detail').scrollIntoView({block: 'start', behavior: 'smooth'});
+}
+function setlistLink(show, text, className) {
+  const link = el('a', text, className);
+  link.href = locationPath() + '?' + urlParams(show);
+  link.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault(); openShow(show);
+  });
+  return link;
+}
+function restoreUrl() {
+  const params = new URLSearchParams(window.location.search);
+  for (const key of ['query', 'from', 'to', 'country']) $('#' + key).value = params.get(key) || '';
+  state.selected = [...new Set(params.getAll('entity'))].filter(id => state.index.byEntity.has(id));
+  $('#setlists-only').checked = params.get('setlists') === '1';
+  state.active = state.index.shows.find(show => show.show_id === params.get('show') || show.id === params.get('show'))?.id || null;
+  state.limit = 40;
+}
 function renderChoices() {
   const selected = $('#selected');
   selected.replaceChildren(...state.selected.map(id => {
@@ -67,18 +104,17 @@ function renderShows() {
   if (!state.results.length) list.append(el('p', 'No shows match these filters. Try removing a term or selecting a suggested entity.', 'empty'));
   for (const show of state.results.slice(0, state.limit)) {
     const card = el('article', undefined, 'show' + (state.active === show.id ? ' active' : ''));
-    card.append(el('p', `${show.date} · ${show.show_id}`, 'date'));
-    const title = button(show.location_as_listed.venue, () => {
-      state.active = show.id;
-      renderShows();
-      renderShow(show);
-      $('#detail').focus();
-      if (matchMedia('(max-width: 760px)').matches) $('#detail').scrollIntoView({behavior: 'smooth', block: 'start'});
-    }, 'show-title');
-    title.setAttribute('aria-label', `Show details: ${show.date}, ${show.location_as_listed.venue}, ${location(show)}`);
+    card.id = 'show-' + show.show_id;
+    card.addEventListener('click', event => { if (!event.target.closest('a, button')) openShow(show); });
+    card.append(setlistLink(show, `${show.date} · ${show.show_id}`, 'date'));
+    const title = setlistLink(show, show.location_as_listed.venue, 'show-title');
+    title.setAttribute('aria-label', `Open setlist: ${show.date}, ${show.location_as_listed.venue}, ${location(show)}`);
     card.append(title, el('p', location(show)));
     const count = state.index.performances.get(show.id).length;
-    card.append(el('p', count ? `${count} listed tracks` : 'Setlist not published'), sourceLink(show));
+    card.append(el('p', count ? `${count} listed tracks` : 'Setlist not published'));
+    const actions = el('div', undefined, 'show-actions');
+    actions.append(setlistLink(show, count ? 'Setlist →' : 'Show details →', 'setlist-action'), sourceLink(show));
+    card.append(actions);
     list.append(card);
   }
   $('#more').hidden = state.limit >= state.results.length;
@@ -87,6 +123,14 @@ function renderShow(show) {
   const detail = $('#detail');
   detail.replaceChildren(el('p', `${show.date} · ${show.show_id}`, 'detail-label'),
     el('h2', show.location_as_listed.venue), el('p', location(show), 'detail-meta'), sourceLink(show, true));
+  const actions = el('div', undefined, 'detail-actions');
+  const permalink = el('a', 'Link to this setlist');
+  permalink.href = locationPath() + '?show=' + encodeURIComponent(show.show_id);
+  const back = button('← Back to shows', () => {
+    const target = document.getElementById('show-' + show.show_id)?.querySelector('.setlist-action') || $('#results');
+    target.focus({preventScroll:true}); target.scrollIntoView({behavior:'smooth',block:'center'});
+  }, 'quiet');
+  actions.append(permalink, back); detail.append(actions);
   const acts = [...state.index.related.get(show.id)].map(id => state.index.nodes.get(id)).filter(node => node.type === 'band');
   if (acts.length) {
     detail.append(el('h3', 'Listed opening acts'));
@@ -133,7 +177,7 @@ function renderOverview() {
   }
   detail.append(group, el('p', 'Select another track to find shows containing both. Co-occurrence counts each show once, including when the source repeats a track.', 'hint'));
 }
-function update() {
+function update({write = true} = {}) {
   if (!state.index) return;
   const options = filters();
   const invalid = options.from && options.to && Number(options.from) > Number(options.to);
@@ -143,11 +187,7 @@ function update() {
   renderShows();
   const show = state.active && state.results.find(show => show.id === state.active);
   if (show) renderShow(show); else { state.active = null; renderOverview(); }
-  const params = new URLSearchParams();
-  for (const key of ['query', 'from', 'to', 'country']) if (options[key]) params.set(key, options[key]);
-  for (const id of state.selected) params.append('entity', id);
-  if (options.setlistsOnly) params.set('setlists', '1');
-  history.replaceState(null, '', locationPath() + (params.size ? '?' + params : ''));
+  if (write) syncUrl();
 }
 function locationPath() { return window.location.pathname; }
 
@@ -163,10 +203,7 @@ async function init() {
     for (const country of graph.nodes.filter(node => node.type === 'country').sort((a, b) => a.name.localeCompare(b.name))) {
       const option = el('option', country.name); option.value = country.id; $('#country').append(option);
     }
-    const params = new URLSearchParams(window.location.search);
-    for (const key of ['query', 'from', 'to', 'country']) if (params.has(key)) $('#' + key).value = params.get(key);
-    state.selected = [...new Set(params.getAll('entity'))].filter(id => state.index.byEntity.has(id));
-    $('#setlists-only').checked = params.get('setlists') === '1';
+    restoreUrl();
     const missing = state.index.shows.filter(show => !state.index.performances.get(show.id).length).length;
     const review = graph.nodes.filter(node => node.type === 'song' && node.review_status === 'needs_review').length;
     $('#quality').append(el('p', `${missing} shows have no listed setlist; ${review} track labels require identity review. Source numbering anomalies are flagged in show details. Original fields remain unchanged.`));
@@ -183,6 +220,11 @@ async function init() {
       $('#setlists-only').checked = false; update();
     });
     update();
+    if (state.active) $('#detail').scrollIntoView({block:'start'});
+    window.addEventListener('popstate', () => {
+      restoreUrl(); update({write:false});
+      if (state.active) $('#detail').scrollIntoView({block:'start'});
+    });
   } catch (error) {
     $('#summary').textContent = 'The archive could not be loaded. Please reload the page or visit Dischord directly.';
     console.error(error);
