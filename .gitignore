@@ -4,3 +4,6 @@ __pycache__/
 .cache/
 .uv-cache/
 data/
+web/data.json
+web/manifest.json
+web-preview.png
