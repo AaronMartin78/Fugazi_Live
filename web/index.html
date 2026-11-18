@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="explore.css">
   <link rel="stylesheet" href="search-ui.css">
-  <script type="module" src="app.mjs?v=show-links-1"></script>
+  <script type="module" src="app.mjs?v=song-regions-1"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to shows</a>
@@ -28,7 +28,7 @@
       <p class="hint">All search terms must match. Put a phrase in quotes, or select an entity below to follow its graph links. Select two songs to find shows containing both.</p>
       <div id="suggestions" class="suggestions" aria-label="Matching graph entities"></div>
       <div id="selected" class="selected" aria-label="Selected entities"></div>
-      <div class="filters"><label>From year<input id="from" type="number" min="1987" max="2002" placeholder="1987"></label><label>To year<input id="to" type="number" min="1987" max="2002" placeholder="2002"></label><label>Country / archive label<select id="country"><option value="">All countries</option></select></label><label class="check"><input id="setlists-only" type="checkbox">With a listed setlist</label><button id="reset" type="button" class="quiet">Clear all</button></div>
+      <div class="filters"><label>From year<input id="from" type="number" min="1987" max="2002" placeholder="1987"></label><label>To year<input id="to" type="number" min="1987" max="2002" placeholder="2002"></label><label>Region<select id="search-region"><option value="">Everywhere</option></select></label><label>Country / archive label<select id="country"><option value="">All countries</option></select></label><label class="check"><input id="setlists-only" type="checkbox">With a listed setlist</label><button id="reset" type="button" class="quiet">Clear all</button></div>
       <p id="filter-error" role="alert"></p>
     </section>
     <div class="graph-hint"><div class="connections" aria-label="Example graph: a show links to songs and cities"><span>Song</span> ← performed — <span>Show</span> — happened_in → <span>City</span></div><p>A show connects to its listed songs, venue, location, and opening acts. Select multiple entities to find shows linked to all of them. <a href="technical.html#search">How search works →</a></p></div>

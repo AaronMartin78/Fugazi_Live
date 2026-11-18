@@ -1,6 +1,7 @@
-import {createIndex, search, dischordUrl} from './graph.mjs';
+import {createIndex, search, dischordUrl} from './graph.mjs?v=song-regions-1';
 import {summarize, networkLayout, nodeRadius} from './metrics.mjs';
 import {mapProjection} from './map-projection.mjs';
+import {inRegion, regionGroups} from './regions.mjs';
 
 const $ = value => document.querySelector(value);
 const state = {index: null, geography: null, land: null, borders: null, metrics: null, selectedAct: null, applied: {}};
@@ -28,14 +29,15 @@ function activate(node, handler) {
   node.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); handler(); } });
 }
 function options() { return {from: $('#from').value, to: $('#to').value, country: $('#country').value}; }
-function searchUrl(entities) {
+function searchUrl(entities, extra = {}) {
   const params = new URLSearchParams();
   for (const [key,value] of Object.entries(state.applied)) if (value) params.set(key,value);
   for (const id of entities) params.append('entity',id);
+  for (const [key,value] of Object.entries(extra)) if (value) params.set(key,value);
   return 'index.html?' + params;
 }
 function entityShows(ids) { return state.metrics.shows.filter(show => ids.every(id => state.index.byEntity.get(id)?.has(show.id))); }
-function selection(target, title, shows, entities, note) {
+function selection(target, title, shows, entities, note, extra = {}) {
   const container = $(target); container.hidden = false;
   container.replaceChildren(el('h3', title), el('p', `${number(shows.length)} shows in this selection. ${note || ''}`));
   const list = el('ul', undefined, 'show-links');
@@ -47,12 +49,15 @@ function selection(target, title, shows, entities, note) {
     if (url) { const link = el('a', 'View on Dischord ↗'); link.href = url; row.append(link); }
     list.append(row);
   }
-  const link = el('a', `Explore all ${number(shows.length)} shows in Search →`, 'all-shows'); link.href = searchUrl(entities);
+  const link = el('a', `Explore all ${number(shows.length)} shows in Search →`, 'all-shows'); link.href = searchUrl(entities,extra);
   container.append(list, link);
   return container;
 }
 function renderSongs() {
-  const metrics = state.metrics, rows = metrics.songs.slice(0,20), chart = $('#song-chart');
+  const region = $('#song-region').value;
+  const metrics = summarize(state.index,state.metrics.shows.filter(show => inRegion(show,region)),state.geography);
+  const rows = metrics.songs.slice(0,20), chart = $('#song-chart');
+  $('#song-region-scope').textContent = `${regionGroups[region]?.name || 'Everywhere'} · ${number(metrics.shows.length)} shows · ${number(metrics.setlists)} published setlists`;
   chart.replaceChildren(); $('#song-selection').hidden = true;
   $('#song-insight').textContent = rows.length ? `${rows[0].node.name} leads this selection: listed at ${number(rows[0].count)} of ${number(metrics.setlists)} shows with setlists (${(100 * rows[0].count / metrics.setlists).toFixed(1)}%).` : 'No release-matched songs are listed for this selection.';
   if (!rows.length) chart.append(el('p', 'Try a different year range or country.', 'empty-chart'));
@@ -60,7 +65,7 @@ function renderSongs() {
     const bar = button('', () => {
       for (const other of chart.querySelectorAll('button')) other.setAttribute('aria-pressed','false');
       bar.setAttribute('aria-pressed','true');
-      selection('#song-selection', row.node.name, entityShows([row.id]), [row.id], 'Counted once per show; missing setlists remain unknown.');
+      selection('#song-selection', row.node.name, metrics.shows.filter(show => state.index.byEntity.get(row.id)?.has(show.id)), [row.id], 'Counted once per show; missing setlists remain unknown.', {region});
     }, 'song-row');
     bar.setAttribute('aria-pressed','false');
     bar.setAttribute('aria-label', `${position + 1}. ${row.node.name}, ${row.count} shows. View shows.`);
@@ -208,6 +213,7 @@ function update() {
   state.metrics = summarize(state.index,shows,state.geography);
   $('#scope-summary').textContent = `${number(shows.length)} shows · ${number(state.metrics.setlists)} published setlists · ${from}–${to} · ${values.country ? state.index.nodes.get(values.country).name : 'Everywhere'}`;
   const params = new URLSearchParams(Object.entries(values).filter(([,value]) => value));
+  if ($('#song-region').value) params.set('song-region',$('#song-region').value);
   history.replaceState(null,'',window.location.pathname+'?'+params);
   renderSongs(); renderMap(); renderNetwork();
 }
@@ -221,9 +227,17 @@ async function init() {
     }
     const params = new URLSearchParams(window.location.search);
     for (const key of ['from','to','country']) if (params.has(key)) $('#'+key).value = params.get(key);
+    for (const [id,region] of Object.entries(regionGroups)) { const option = el('option',region.name); option.value=id; $('#song-region').append(option); }
+    if (regionGroups[params.get('song-region')]) $('#song-region').value=params.get('song-region');
     $('#apply').disabled = false;
     $('#scope-form').addEventListener('submit',event => { event.preventDefault(); update(); });
-    $('#reset').addEventListener('click',() => { $('#from').value = '1987'; $('#to').value = '2002'; $('#country').value = ''; update(); });
+    $('#reset').addEventListener('click',() => { $('#from').value = '1987'; $('#to').value = '2002'; $('#country').value = ''; $('#song-region').value=''; update(); });
+    $('#song-region').addEventListener('change',() => {
+      renderSongs();
+      const params=new URLSearchParams(window.location.search);
+      if ($('#song-region').value) params.set('song-region',$('#song-region').value); else params.delete('song-region');
+      history.replaceState(null,'',window.location.pathname+'?'+params);
+    });
     $('#region').addEventListener('change',renderMap); $('#network-limit').addEventListener('change',renderNetwork);
     update();
   } catch (error) {

@@ -123,3 +123,19 @@ Browser checks passed on four-result and full 1,049-result searches, including
 a bare `?show=FLS0927` link. A compact relationship diagram explains the graph
 beside Search. All 23 Python and 16 JavaScript checks passed, including a new
 five-song intersection comparison against original source records.
+
+## Regional song rankings
+
+Added a chart-specific Song region filter with North America, South America,
+Europe, Asia and Oceania groupings based on archive country labels. Every
+archive country maps to exactly one group. Unmapped cities still contribute.
+Region intersects the shared year/country scope, and song drilldowns preserve
+the region in Search. Regional chart URLs restore the selection on reload.
+Nineteen JavaScript checks passed, including source-record comparisons for
+South America, intersecting scopes, and unmapped-city inclusion. Browser checks
+confirmed Europe (305 shows / 273 setlists), South America (21 / 18), and a
+Waiting Room drilldown retaining all 17 matching South American shows.
+
+Removed Neo4j troubleshooting from the public Technical note; the public app
+loads JSON and has no Neo4j runtime dependency. Added Ask Aaron with a short
+description to the main site's homepage.

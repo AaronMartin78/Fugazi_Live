@@ -16,7 +16,7 @@ if 'href: fugazi/index.html' not in text:
     text = text.replace(anchor, '      - href: fugazi/index.html\n        text: Fugazi Live\n' + anchor, 1)
 destination = root / 'fugazi'
 destination.mkdir(exist_ok=True)
-for name in ['index.html', 'style.css', 'app.mjs', 'graph.mjs', 'search-ui.css', 'technical.html', 'technical.css', 'explore.html', 'explore.css', 'explore.mjs', 'metrics.mjs', 'cities.json', 'land.json', 'borders.json', 'map-projection.mjs', 'GEOGRAPHY.md']:
+for name in ['index.html', 'style.css', 'app.mjs', 'graph.mjs', 'regions.mjs', 'search-ui.css', 'technical.html', 'technical.css', 'explore.html', 'explore.css', 'explore.mjs', 'metrics.mjs', 'cities.json', 'land.json', 'borders.json', 'map-projection.mjs', 'GEOGRAPHY.md']:
     source = Path('web') / name
     target = destination / name
     if not target.exists() or source.read_text(encoding='utf-8') != target.read_text(encoding='utf-8'):

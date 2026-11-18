@@ -1,4 +1,5 @@
-import {createIndex, search, suggestions, dischordUrl, cooccurrence} from './graph.mjs';
+import {createIndex, search, suggestions, dischordUrl, cooccurrence} from './graph.mjs?v=song-regions-1';
+import {regionGroups} from './regions.mjs';
 
 const $ = selector => document.querySelector(selector);
 const state = {selected: [], limit: 40, active: null, index: null, results: []};
@@ -39,11 +40,12 @@ function choose(id) {
 }
 function filters() {
   return {query: $('#query').value, selected: state.selected, from: $('#from').value,
-    to: $('#to').value, country: $('#country').value, setlistsOnly: $('#setlists-only').checked};
+    to: $('#to').value, country: $('#country').value, region: $('#search-region').value, setlistsOnly: $('#setlists-only').checked};
 }
 function urlParams(show = state.active && state.index.nodes.get(state.active)) {
   const options = filters(), params = new URLSearchParams();
   for (const key of ['query', 'from', 'to', 'country']) if (options[key]) params.set(key, options[key]);
+  if (options.region) params.set('region', options.region);
   for (const id of state.selected) params.append('entity', id);
   if (options.setlistsOnly) params.set('setlists', '1');
   if (show) params.set('show', show.show_id);
@@ -73,6 +75,7 @@ function setlistLink(show, text, className) {
 function restoreUrl() {
   const params = new URLSearchParams(window.location.search);
   for (const key of ['query', 'from', 'to', 'country']) $('#' + key).value = params.get(key) || '';
+  $('#search-region').value = regionGroups[params.get('region')] ? params.get('region') : '';
   state.selected = [...new Set(params.getAll('entity'))].filter(id => state.index.byEntity.has(id));
   $('#setlists-only').checked = params.get('setlists') === '1';
   state.active = state.index.shows.find(show => show.show_id === params.get('show') || show.id === params.get('show'))?.id || null;
@@ -203,6 +206,7 @@ async function init() {
     for (const country of graph.nodes.filter(node => node.type === 'country').sort((a, b) => a.name.localeCompare(b.name))) {
       const option = el('option', country.name); option.value = country.id; $('#country').append(option);
     }
+    for (const [id,region] of Object.entries(regionGroups)) { const option=el('option',region.name); option.value=id; $('#search-region').append(option); }
     restoreUrl();
     const missing = state.index.shows.filter(show => !state.index.performances.get(show.id).length).length;
     const review = graph.nodes.filter(node => node.type === 'song' && node.review_status === 'needs_review').length;
@@ -212,11 +216,11 @@ async function init() {
     $('#search-form').addEventListener('submit', event => { event.preventDefault(); state.active = null; state.limit = 40; update(); });
     let timer;
     $('#query').addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => { state.active = null; state.limit = 40; update(); }, 180); });
-    for (const id of ['from', 'to', 'country', 'setlists-only']) $('#' + id).addEventListener('change', () => { state.active = null; state.limit = 40; update(); });
+    for (const id of ['from', 'to', 'country', 'search-region', 'setlists-only']) $('#' + id).addEventListener('change', () => { state.active = null; state.limit = 40; update(); });
     $('#more').addEventListener('click', () => { state.limit += 40; renderShows(); });
     $('#reset').addEventListener('click', () => {
       state.selected = []; state.active = null; state.limit = 40;
-      for (const id of ['query', 'from', 'to', 'country']) $('#' + id).value = '';
+      for (const id of ['query', 'from', 'to', 'country', 'search-region']) $('#' + id).value = '';
       $('#setlists-only').checked = false; update();
     });
     update();

@@ -1,4 +1,5 @@
 // Pure graph indexing and deterministic search. No services or inference.
+import {inRegion} from './regions.mjs';
 export const normalize = value => String(value ?? '').normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
 
 export function createIndex(graph) {
@@ -27,7 +28,7 @@ export function createIndex(graph) {
   return {graph, nodes, shows, related, performances, byEntity, entities, haystacks, aliases};
 }
 
-export function search(index, {query = '', selected = [], from = '', to = '', country = '', setlistsOnly = false} = {}) {
+export function search(index, {query = '', selected = [], from = '', to = '', country = '', region = '', setlistsOnly = false} = {}) {
   // Quoted text stays together. Each term and selected entity must match.
   const tokens = [...query.matchAll(/"([^"]+)"|(\S+)/g)].map(match => ({text: normalize(match[1] || match[2]), quoted: !!match[1]}));
   const terms = [];
@@ -52,6 +53,7 @@ export function search(index, {query = '', selected = [], from = '', to = '', co
     const year = show.date?.slice(0, 4);
     if (from && year < String(from) || to && year > String(to)) return false;
     if (country && show.country_id !== country) return false;
+    if (!inRegion(show,region)) return false;
     if (setlistsOnly && !index.performances.get(show.id).length) return false;
     if (!selected.every(id => index.byEntity.get(id)?.has(show.id))) return false;
     return groups.every(({term, showIds}) => showIds ? showIds.has(show.id)
